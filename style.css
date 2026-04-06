@@ -1,0 +1,420 @@
+/* =========================================
+   RESETEO Y ESTILOS GENERALES
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* =========================================
+   NAVEGACIÓN (HEADER)
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f0a500;
+}
+
+.nav-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-contact {
+    padding: 10px 25px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.social-icons a {
+    color: #555;
+    font-size: 18px;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #000;
+}
+
+/* =========================================
+   SECCIÓN INICIO (HERO)
+   ========================================= */
+.hero-section {
+    height: 100vh;
+    background-image: url('fondo pagina.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 600px;
+    color: #333;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #FFD700; /* Color Amarillo Oro */
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   SECCIÓN NOSOTROS
+   ========================================= */
+.about-section {
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1b4b36;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   SECCIÓN SERVICIOS
+   ========================================= */
+.services-section {
+    background-color: #e9f5f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #1b4b36;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    gap: 40px;
+}
+
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-text {
+    flex: 1;
+}
+
+.service-text h3 {
+    font-size: 2rem;
+    color: #0b3d91;
+    margin-bottom: 20px;
+}
+
+.service-text ul {
+    list-style-type: none;
+}
+
+.service-text ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.service-text ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #25D366;
+    font-weight: bold;
+}
+
+.service-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Imágenes con bordes rectangulares */
+.blob-shape {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 0; /* Esto hace que el borde sea rectangular */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.blob-shape-2 {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 0; /* Esto hace que el borde sea rectangular */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.multiple-images img {
+    max-width: 280px; /* Tamaño aumentado para escritorio */
+    border-radius: 0; /* Añadido por seguridad para asegurar bordes rectos */
+}
+
+/* =========================================
+   SECCIÓN EVENTOS (COLLAGE DE FOTOS)
+   ========================================= */
+.events-section {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.photo-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.photo-collage img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-collage img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* =========================================
+   SECCIÓN CONTACTO
+   ========================================= */
+.contact-section {
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #1b4b36;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.info-box {
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-10px);
+}
+
+.info-box i {
+    font-size: 2.5rem;
+    color: #0b3d91;
+    margin-bottom: 15px;
+}
+
+.info-box h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info-box a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: #1b4b36;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVO (PARA CELULARES Y TABLETS)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    
+    .container {
+        padding: 40px 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-contact {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .hero-section {
+        padding: 0 5%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .service-row, 
+    .service-row.reverse {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .service-text ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .service-image {
+        width: 100%;
+    }
+
+    .multiple-images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .multiple-images img {
+        max-width: 200px; /* Tamaño aumentado para celulares */
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .info-box {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+}
